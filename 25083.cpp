@@ -8,4 +8,5 @@ int main(void) {
 		<< "   `~\\/\n"
 		<< "      |\n"
 		<< "      |";
+	return 0;
 }
