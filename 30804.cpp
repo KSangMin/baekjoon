@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 #include<vector>
 #include<queue>
 
@@ -17,19 +16,15 @@ int main() {
 		cin >> temp;
 		q.push(temp);
 
-		if (cnt[temp] == 0) {
-			cnt[temp]++;
-			kind++;
-		}
+		if (cnt[temp] == 0) kind++;
+		cnt[temp]++;
 
 		while (kind > 2) {
 			temp = q.front();
 			q.pop();
 
 			cnt[temp]--;
-			if (cnt[temp] == 0) {
-				kind--;
-			}
+			if (cnt[temp] == 0) kind--;
 		}
 
 		answer = max(answer, (int)q.size());
